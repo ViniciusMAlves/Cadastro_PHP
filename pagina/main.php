@@ -26,32 +26,29 @@
                 <th scope="col">Nome</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Função</th>
+                <th scope="col">Idade</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Ações</th>
             </thead>
             <tbody>
                 <?php   
                     while ($row = mysqli_fetch_assoc($query)) {
-                        echo "<tr> <td>" . $row["id"] . "</td> <td>" . $row["nome"] ."</td> <td>" . $row["email"] ."</td> <td>" . $row["area"] ."</td> <td> | <a href='excluir.php?id=" . $row["id"] . "'>Excluir</a></td </tr>";
+                        echo "<tr> <td>" . $row["id"] . "</td> 
+                              <td>" . $row["nome"] ."</td> 
+                              <td>" . $row["email"] ."</td> 
+                              <td>" . $row["area"] ."</td> 
+                              <td>" . $row["idade"] ."</td> 
+                              <td>" . $row["cpf"] ."</td> 
+                              <td>
+                                <a href='excluir.php?id=" . $row["id"] . "' class='btn btn-danger btn-xs'>Excluir</a>
+                                <a href='alteira_func.php?id=" . $row["id"] . "' class='btn btn-primary btn-xs'>Alteirar</a>
+                              </td </tr>";
                     }
                 ?>
             </tbody>
         </table>
-
-        <ul>
-        
-        </ul>
-    </div>    
-    <form action="cadastrar.php" method="post">
-        <div class = "cad">
-            <label for="nomefunc">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="nome do funcionario" class="form-control" />
-            <label for="emailfunc">E-mail</label>
-            <input type="text" id="email" name="email" placeholder="e-mail do funcionario" class="form-control" />
-            <label for="areafunc">Area de atuação</label>
-            <input type="text" id="area" name="area" placeholder="Area de atuação do funcionario" class="form-control" />
-        </div>
-        <button class="btn btn-primary btn-lg">Cadastrar Curso</button>
-    </form>
-    <br />
+        <button type="button" class="btn btn-success" onclick="window.location.href = 'cadastro_func.php'">Cadastrar</button>
+    </div> 
     <?php require_once("rodape.php") ?>
 </body>
 </html>

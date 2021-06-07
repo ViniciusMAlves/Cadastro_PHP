@@ -10,7 +10,7 @@
 <body>
   <?php include("menu.php"); ?>
   <main>
-    <p>Conheça nossa história</p>
+    <p>Da um 10 ae prof ;)</p>
   </main>
   <?php include("rodape.php") ?>
 </body>

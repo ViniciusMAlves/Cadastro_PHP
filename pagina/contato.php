@@ -10,7 +10,7 @@
 <body>
   <?php include("menu.php"); ?>
   <main>
-    <p>Entre em contato conosco pelo telefone XXXXX</p>
+    <p>Meu Github: <a href="https://github.com/ViniciusMAlves">ViniciusMAlves</a></p>
   </main>
   <?php include("rodape.php") ?>
 </body>
